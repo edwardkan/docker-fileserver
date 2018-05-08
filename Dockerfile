@@ -30,15 +30,10 @@ ADD container-files/etc /etc
 ADD container-files/config /config 
 
 
+
 RUN \
     yum -y install \
         samba samba-client samba-common \
-        rsync \
-
-
-RUN \ 
-    # create backup of origal smb.conf
-    cp /etc/samba/smb.conf /etc/samba/smb.conf.bak && \
 
 
 # Clean YUM caches to minimise Docker image size
