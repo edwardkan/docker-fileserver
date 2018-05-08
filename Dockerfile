@@ -6,7 +6,7 @@
 # http://stackoverflow.com/questions/31644391/docker-centos-7-cron-not-working-in-local-machine
 #
 # Run:
-# docker run --rm -it -h fileserver --name fileserver -v /mnt/dockerData/fileserver:/mnt/remoteStorage -p 1023:22 -p 445:445 -p 139:139 -p 135:135 -p 137:137/udp -p 138:138/udp -d edwardkan/docker-fileserver
+# docker run --rm -it -h fileserver --name fileserver -v /mnt/dockerData/fileserver:/mnt/coreStorage -p 1023:22 -p 445:445 -p 139:139 -p 135:135 -p 137:137/udp -p 138:138/udp -d edwardkan/fileserver
 # 
 # Build:
 # docker build -t edwardkan/fileserver .
