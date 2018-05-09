@@ -34,7 +34,7 @@ ADD container-files/config /config
 RUN \
     yum -y install \
         samba samba-client samba-common \
-
+        nfs-utils \
 
 # Clean YUM caches to minimise Docker image size
 RUN yum clean all && rm -rf /tmp/yum*
