@@ -34,7 +34,15 @@ ADD container-files/config /config
 RUN \
     yum -y install \
         samba samba-client samba-common \
-        nfs-utils \
+        nfs-utils 
+
+RUN \
+    adduser edwardkan && \
+    groupadd edward && \
+    usermod -a -G edward edwardkan && \
+    pdbedit -i smbpasswd:/config/samba_user.bak 
+
+
 
 # Clean YUM caches to minimise Docker image size
 RUN yum clean all && rm -rf /tmp/yum*
