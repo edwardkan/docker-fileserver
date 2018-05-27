@@ -61,4 +61,7 @@ expose 137/udp
 expose 138/udp
 
 
-
+# Run supervisord as demon with option -n 
+# supervisord already triggerd from base cetnos7 image
+#CMD dockerize /config/run.sh
+#CMD ["/usr/bin/supervisord", "-n", "-c", "/etc/supervisord.conf"]
