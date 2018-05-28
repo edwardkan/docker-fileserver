@@ -7,6 +7,8 @@
 #
 # Run:
 # docker run --rm -it -h fileserver --name fileserver -p 1023:22 -p 445:445 -p 139:139 -p 135:135 -p 137:137/udp -p 138:138/udp -v /mnt/dockerData/fileserver:/mnt/coreStorage -d edwardkan/fileserver
+#
+# Run CoreOS:
 # docker run -h fileserver --name fileserver -p 1023:22 -p 445:445 -p 139:139 -p 135:135 -p 137:137/udp -p 138:138/udp -v /mnt/dockerData/fileserver:/mnt/coreStorage edwardkan/fileserver
 # 
 # Build:
